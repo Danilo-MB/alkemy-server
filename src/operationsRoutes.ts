@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { operationsController } from './controllers/operationsController'
 
 class OperacionesRoutes {
 
@@ -9,7 +10,11 @@ class OperacionesRoutes {
     }
 
     config(): void {
-        this.router.get('/', (req, res) => res.send("Operaciones"));
+        this.router.get('/', operationsController.list);
+        this.router.get('/:id', operationsController.getOne);
+        this.router.post('/', operationsController.create);
+        this.router.delete('/:id', operationsController.delete);
+        this.router.put('/:id', operationsController.update);
     }
 
 

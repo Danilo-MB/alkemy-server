@@ -3,6 +3,7 @@ import indexRoutes from './indexRoutes';
 import operationsRoutes from './operationsRoutes';
 import morgan from 'morgan';
 import cors from 'cors';
+import database from './database';
 
 class Server {
 
@@ -32,7 +33,6 @@ class Server {
             console.log("Server on port " + this.app.get('port'));
         });
     }
-
 
 
 }
