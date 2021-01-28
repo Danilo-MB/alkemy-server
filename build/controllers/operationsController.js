@@ -42,7 +42,7 @@ class OperationsController {
     }
     delete(req, res) {
         const { id } = req.params;
-        database_1.default.query('DELETE FROM operation WHERE id=?', [id], function (err, count) {
+        database_1.default.query('DELETE FROM operation WHERE id=?', id, function (err, count) {
             if (err) {
                 res.status(500);
                 res.json({ error: err });

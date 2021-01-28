@@ -7,13 +7,15 @@ exports.userController = void 0;
 const database_1 = __importDefault(require("../database"));
 class UserController {
     create(req, res) {
-        database_1.default.query('INSERT INTO user set?', [req.body]);
-        res.json({ message: 'user created.' });
-    }
-    update(req, res) {
-        const { id } = req.params;
-        database_1.default.query('UPDATE operation set? WHERE id=?', [req.body, id]);
-        res.json({ message: 'operation was updated.' });
+        database_1.default.query('INSERT INTO user set ?', req.body, function (err, count) {
+            if (err) {
+                res.status(500);
+                res.json({ error: err });
+            }
+            else {
+                res.json({ message: 'user created.' });
+            }
+        });
     }
 }
 exports.userController = new UserController();

@@ -17,8 +17,6 @@ class OperacionesRoutes {
         this.router.put('/:id', operationsController.update);
     }
 
-
-
 }
 
 const operacionesRoutes = new OperacionesRoutes();

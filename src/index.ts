@@ -3,7 +3,7 @@ import indexRoutes from './indexRoutes';
 import operationsRoutes from './operationsRoutes';
 import morgan from 'morgan';
 import cors from 'cors';
-import database from './database';
+import userRoutes from './userRoutes';
 
 class Server {
 
@@ -20,12 +20,12 @@ class Server {
         this.app.use(morgan('dev'));
         this.app.use(cors());
         this.app.use(express.json());
-        //this.app.use(express.urlencoded());
     }
 
     routes(): void {
         this.app.use(indexRoutes);
         this.app.use('/operations', operationsRoutes);
+        this.app.use('/user', userRoutes);
     }
 
     start(): void {

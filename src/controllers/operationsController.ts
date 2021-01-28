@@ -39,7 +39,7 @@ class OperationsController {
 
     public delete(req: Request, res: Response){
         const { id } = req.params;
-        pool.query('DELETE FROM operation WHERE id=?', [id], function (err, count) {
+        pool.query('DELETE FROM operation WHERE id=?', id, function (err, count) {
             if(err){
                 res.status(500);
                 res.json({error: err});
