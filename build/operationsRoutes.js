@@ -17,3 +17,4 @@ class OperacionesRoutes {
 }
 const operacionesRoutes = new OperacionesRoutes();
 exports.default = operacionesRoutes.router;
+//# sourceMappingURL=operationsRoutes.js.map
