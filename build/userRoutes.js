@@ -8,7 +8,8 @@ class UserRoutes {
         this.config();
     }
     config() {
-        this.router.post('/user', userController_1.userController.create);
+        this.router.post('/', userController_1.userController.create);
+        this.router.get('/', userController_1.userController.list);
     }
 }
 const userRoutes = new UserRoutes();

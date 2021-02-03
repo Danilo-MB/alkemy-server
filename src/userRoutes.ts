@@ -10,7 +10,8 @@ class UserRoutes {
     }
 
     config(): void {
-        this.router.post('/user', userController.create);
+        this.router.post('/', userController.create);
+        this.router.get('/', userController.list);
     }
 
 
