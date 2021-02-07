@@ -9,6 +9,7 @@ CREATE TABLE operation (
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     date VARCHAR(10) NOT NULL,
     operation_type VARCHAR(20) NOT NULL,
+    category VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 );
 
