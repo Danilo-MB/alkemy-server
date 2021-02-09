@@ -4,6 +4,7 @@ import operationsRoutes from './operationsRoutes';
 import morgan from 'morgan';
 import cors from 'cors';
 import userRoutes from './userRoutes';
+import categoriesRoutes from './categoriesRoutes';
 
 class Server {
 
@@ -26,6 +27,7 @@ class Server {
         this.app.use(indexRoutes);
         this.app.use('/operations', operationsRoutes);
         this.app.use('/user', userRoutes);
+        this.app.use('/categories', categoriesRoutes);
     }
 
     start(): void {

@@ -19,4 +19,8 @@ CREATE TABLE user (
     PRIMARY KEY (email)
 );
 
+CREATE TABLE categories (
+    category VARCHAR(255) NOT NULL
+)
+
 
